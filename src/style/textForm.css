@@ -1,0 +1,45 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    margin-top: 0px;
+}
+#textForm{
+    display: block;
+    width: 65%;
+    margin: auto;
+}
+#textForm>h1, #textForm>h2{
+    padding: 6px 0px 2px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+textarea{
+    display: block;
+    background-color: rgb(255, 247, 247);
+    border-radius: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 5px;
+    border: 1px solid red;
+    width: 90%;
+    /* height: 40%;
+    display: block; */
+}
+.btn{
+    padding: 8px 18px;
+    color: white;
+    background-color: blue;
+    border: 2px solid rgb(0, 255, 208);
+    border-radius: 5px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.btn:active{
+    background-color: red;
+}
+#dark{
+    background-color: rgb(4, 9, 56);
+    color: white;
+}
+#light{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
