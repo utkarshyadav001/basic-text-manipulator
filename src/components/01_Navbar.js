@@ -1,6 +1,7 @@
 import React from 'react'
 import '../style/navbar.css'
 import PropTypes from 'prop-types'
+// import { Link } from 'react-router-dom'
 
 
 export default function Navbar(props) {
@@ -18,9 +19,9 @@ export default function Navbar(props) {
             <li><a href="/" id="homeBtn">Home</a></li>
             {/* <li><a href="/" id="createTokenBtn">Create Coin</a></li> */}
             {/* <li><a href="/" id="createNFTBtn">Create NFT</a></li> */}
-            <li><a href="/" id="aboutBtn">About</a></li>
-            <li><a href="/" id="documentsBtn">Documents</a></li>
-            <li><a href="/" id="helpBtn">Help</a></li>
+            <li><a href="/about" id="aboutBtn">About</a></li>
+            {/* <li><a href="/" id="documentsBtn">Documents</a></li> */}
+            {/* <li><a href="/" id="helpBtn">Help</a></li> */}
           </ul>
         </div>
         <div className="checkbox">
@@ -41,10 +42,6 @@ export default function Navbar(props) {
 //  1. propTypes
 //  2. defultProps
 
-Navbar.propTypes = {
-  title: PropTypes.string,
-  connectWallet: PropTypes.bool.isRequired
-}
 
 Navbar.defaultProps = {
   title: "React Master",
