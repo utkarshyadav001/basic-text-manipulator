@@ -1,5 +1,6 @@
 #alert{
-    height: 28px;
+    width: 100%;
+    position: absolute;
 }
 #alertBox{
     padding: 6px 10px;

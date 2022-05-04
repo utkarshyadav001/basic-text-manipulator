@@ -2,12 +2,13 @@
     width: 100%;
     margin-top: 0px;
     min-height: 100vh;
+    padding-top: 30px;
 }
 #textForm{
     display: block;
     width: 65%;
     margin: auto;
-    /* height: 100%; */
+    /* color: white; */
 }
 #textForm>h1, #textForm>h2{
     padding: 2px 0px 4px 0px;
@@ -43,4 +44,39 @@ textarea{
 #light{
     background-color: rgb(255, 255, 255);
     color: black;
+}
+#blue{
+    background-color: blue;
+    color: white;
+}
+#red{
+    background-color: red;
+    color: white;
+}
+#green{
+    background-color: green;
+    color: white;
+}
+#yellow{
+    background-color: yellow;
+    color: white;
+}
+#white{
+    background-color: white;
+    color: black;
+}
+.bk-blue{
+    background-color: rgb(221, 221, 236);
+}
+.bk-red{
+    background-color: rgb(253, 220, 220);
+}
+.bk-green{
+    background-color: rgb(223, 248, 223);
+}
+.bk-yellow{
+    background-color: rgb(247, 247, 220);
+}
+.bk-white{
+    background-color: rgb(240, 235, 235);
 }

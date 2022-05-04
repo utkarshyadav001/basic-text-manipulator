@@ -9,7 +9,7 @@ const Alert = (props) => {
   return (
     <div id="alert" style={props.mode === "dark" ? {backgroundColor: "rgb(4, 9, 56)"} : {backgroundColor: "white"}}>
       {props.alert && <div id="alertBox">
-        <strong>{capitalize(props.alert.type)} </strong> : <p>{props.alert.msg}</p>
+        <strong>{capitalize(props.alert.type)} </strong> : <p>{capitalize(props.alert.msg)}</p>
       </div>}
     </div>
   )

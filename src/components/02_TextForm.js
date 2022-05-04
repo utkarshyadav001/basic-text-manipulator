@@ -48,14 +48,14 @@ export default function TextForm(props) {
     <div className="main"  id={props.mode}>
       <div id="textForm" >
           <h1>{props.formHeading}</h1>
-          <textarea name="formText" id="Text_box" cols="90" rows="14"  onChange={handleOnChange} value={text}></textarea>
+          <textarea name="formText" className={"bk-"+props.mode} id="Text_box" cols="90" rows="14"  onChange={handleOnChange} value={text}></textarea>
           <button disabled={ text.length ===0? true : false} className="btn" onClick={handleUpClicked}>Convert to Upper case</button>
           <button disabled={ text.length ===0? true : false} className="btn" onClick={handleDownClicked}>Convert to Lower case</button>
           <button disabled={ text.length ===0? true : false} className="btn" onClick={handleClearText}>Clear Text</button>
           <button disabled={ text.length ===0? true : false} className="btn" onClick={handleCopyText}>Copy to clipboard</button>
           <button disabled={ text.length ===0? true : false} className="btn" onClick={handleExtraSpaces}>Clear Extra Spaces</button>
           <h2>Your text summary</h2>
-          <p>{text.split(" ").filter( (words)=>{return words}).length} words and {text.length} characters</p>
+          <p>{text.split(/\s+/).filter( (words)=>{return words}).length} words and {text.length} characters</p>
           <p>{0.008*text.split(" ").filter( (words)=>{return words}).length} Min read time</p>
           <h2>Preview</h2>
           <p id="preview">{text.length === 0 ? "Enter text " : text}</p>

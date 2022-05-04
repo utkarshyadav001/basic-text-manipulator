@@ -1,12 +1,12 @@
 import React from 'react'
 import '../style/navbar.css'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 // import { Link } from 'react-router-dom'
 
 
 export default function Navbar(props) {
   return (
-    <nav className={props.mode}>
+    <nav className={"Nav-"+props.mode}>
 
         {/* Navbar Logo Here */}
         <div id="appLogo">
@@ -24,9 +24,16 @@ export default function Navbar(props) {
             {/* <li><a href="/" id="helpBtn">Help</a></li> */}
           </ul>
         </div>
-        <div className="checkbox">
+        {/* <div className="checkbox"> */}
           {/* <input type="checkbox" name="changeMode" id="checkBoxBtn" /> */}
-          <p  onClick={props.togglemode} style={{color: "white"}}  >{props.mode === "light" ? "Enable Dark Mode" : "Enable Light Mode"}</p>
+          {/* <p  onClick={props.togglemode} style={{color: "white"}}  >{props.mode === "light" ? "Enable Dark Mode" : "Enable Light Mode"}</p> */}
+        {/* </div> */}
+        <div className="multiThemes">
+            <p className='multiThemesBtn bg-blue'  onClick={()=>{props.togglemode("blue");}}></p>
+            <p className='multiThemesBtn bg-red'  onClick={()=>{props.togglemode("red");}}></p>
+            <p className='multiThemesBtn bg-green'  onClick={()=>{props.togglemode("green");}}></p>
+            <p className='multiThemesBtn bg-yellow'  onClick={()=>{props.togglemode("yellow");}}></p>
+            <p className='multiThemesBtn bg-white'  onClick={()=>{props.togglemode("white");}}></p>
         </div>
           {/* Connect Wallet Button Here */}
         {/* { props.connectWallet ?
@@ -34,6 +41,7 @@ export default function Navbar(props) {
             <p id="connectWalletBtn">Connect Wallet</p> 
           </div>
            : ""} */}
+          
     </nav>
   )
 }
@@ -41,6 +49,7 @@ export default function Navbar(props) {
 //  PropTypes property
 //  1. propTypes
 //  2. defultProps
+
 
 
 Navbar.defaultProps = {
