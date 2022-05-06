@@ -1,15 +1,14 @@
-// import logo from './logo.svg';
 import { useState } from 'react';
 import './App.css';
 import Navbar from './components/01_Navbar';
 import TextForm from './components/02_TextForm';
 import Alert from './components/04_Alert';
-// import About from './components/03_About';
-// import {
-//   BrowserRouter as Router,
-//   Route,
-//   Switch,
-// } from 'react-router-dom';
+import About from './components/03_About';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from 'react-router-dom';
 
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
     if (mode !== cls) {
       setMode(cls);
       showAlert("sucess", cls + " mode has been enabled");
-      document.title = "Text Analyzer - Light mode";
+
       // setInterval(() => {
       //   document.title = "Install Text Analyzer app";
       // }, 1000);
@@ -33,7 +32,6 @@ function App() {
     else {
       setMode("dark");
       showAlert("sucess ", "Dark mode has been enabled");
-      document.title = "Text Analyzer - Dark mode";
     }
   }
 
@@ -48,26 +46,22 @@ function App() {
     )
     setTimeout(() => {
       setAlert(null)
-    }, 2500);
+    }, 2000);
   }
 
   return (
     <div>
-      {/* <Router> */}
+      <Router>
 
-        <Navbar title="React Master" connectWallet={false}  togglemode={togglemode} mode={mode}/>
+        <Navbar title="Text Analyzer" connectWallet={false}  togglemode={togglemode} mode={mode}/>
         <Alert alert={alert} mode={mode} />
         
-        {/* <Switch> */}
-          {/* <Route exact path="/"> */}
-            <TextForm formHeading="Enter the text to analyze below" mode={mode} showAlert={showAlert}  />
-          {/* </Route> */}
-          {/* <Route exact path="/about"> */}
-            {/* <About mode={mode} /> */}
-          {/* </Route> */}
-        {/* </Switch> */}
+        <Routes>
+          <Route exact path="/" element={<TextForm formHeading="Text Analyzer : Count Word , Character and  Upper case, Lower case and remove extra spaces!" mode={mode} showAlert={showAlert}  />} /> 
+          <Route exact path="/about" element={<About mode={mode} />} />
+        </Routes>
 
-      {/* </Router> */}
+      </Router>
     </div>
   );
 }

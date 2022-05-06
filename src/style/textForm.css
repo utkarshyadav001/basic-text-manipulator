@@ -59,7 +59,7 @@ textarea{
 }
 #yellow{
     background-color: yellow;
-    color: white;
+    color: #170ae5;
 }
 #white{
     background-color: white;
@@ -79,4 +79,19 @@ textarea{
 }
 .bk-white{
     background-color: rgb(240, 235, 235);
+}
+
+
+
+@media (max-width: 550px) {
+    .main{
+        padding-top: 22px;
+    }
+    #textForm>h1, #textForm>h2{
+        font-size: 16px;
+    }
+    .btn{
+        font-size: 10px;
+        padding: 4px 9px;
+    }
 }

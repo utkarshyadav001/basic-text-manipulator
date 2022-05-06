@@ -1,7 +1,7 @@
 import React from 'react'
 import '../style/navbar.css'
 // import PropTypes from 'prop-types'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 export default function Navbar(props) {
@@ -10,18 +10,18 @@ export default function Navbar(props) {
 
         {/* Navbar Logo Here */}
         <div id="appLogo">
-            <a href="/"><h4>{props.title}</h4></a>
+            <Link to="/"><h4>{props.title}</h4></Link>
         </div>
 
         {/* Navbar Button Here */}
         <div id="navBtn">
           <ul>
-            <li><a href="/" id="homeBtn">Home</a></li>
-            {/* <li><a href="/" id="createTokenBtn">Create Coin</a></li> */}
-            {/* <li><a href="/" id="createNFTBtn">Create NFT</a></li> */}
-            <li><a href="/about" id="aboutBtn">About</a></li>
-            {/* <li><a href="/" id="documentsBtn">Documents</a></li> */}
-            {/* <li><a href="/" id="helpBtn">Help</a></li> */}
+            <li><Link to="/" id="homeBtn">Home</Link></li>
+            {/* <li><Link to="/" id="createTokenBtn">Create Coin</Link></li> */}
+            {/* <li><Link to="/" id="createNFTBtn">Create NFT</Link></li> */}
+            <li><Link to="/about" id="aboutBtn">About</Link></li>
+            {/* <li><Link to="/" id="documentsBtn">Documents</Link></li> */}
+            {/* <li><Link to="/" id="helpBtn">Help</Link></li> */}
           </ul>
         </div>
         {/* <div className="checkbox"> */}

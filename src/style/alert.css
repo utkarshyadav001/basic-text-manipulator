@@ -6,9 +6,18 @@
     padding: 6px 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: rgb(217, 245, 210);
-    /* border: 2px solid rgb(14, 11, 11); */
 }
 #alertBox>strong, #alertBox>p{
     font-size: 16px;
     display: inline;
+}
+
+
+@media (max-width: 550px) {
+    #alertBox{
+        padding: 2px 5px;
+    }
+    #alertBox>strong, #alertBox>p{
+        font-size: 11px;
+    }
 }
